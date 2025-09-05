@@ -1,198 +1,305 @@
-/* charity: water Brand Colors & Fonts
-
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
-
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
-
-Fonts:
-- Proxima Nova
-- Avenir
-
-*/
-
-/* 
-  Charity: Water Landing Page Styles
-  This CSS uses the provided color palette and beginner-friendly styles.
-*/
-
-/* Set up the main font and background color for the whole page */
-body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #222;
+/* --- Header Bar Styles --- */
+.header-bar {
+  /* Blue background for header */
+  background-color: #77a8bb;
+  display: flex;
+  align-items: center; /* Vertically center logo and brand name */
+  justify-content: flex-start;
+  padding: 0 0 0 32px;
+  height: 70px;
+  position: relative;
 }
 
-/* Add a slight shadow and rounded corners to each section for depth */
-section {
-  background: #fff; /* White background for sections */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
-  margin: 24px 10px; /* Space between sections */
-  padding: 24px 16px;
+/* Logo styles */
+.logo {
+  /* Keep the logo's natural aspect ratio and prevent stretching */
+  max-height: 32px;
+  max-width: 32px;
+  margin-right: 18px;
+  vertical-align: middle;
+  object-fit: contain;
+  width: auto;
+  height: auto;
 }
 
-/* Hero Section Styles */
-.hero {
-  position: relative; /* Needed for overlay */
-  /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
-  background-size: cover;      /* Make the image cover the whole area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
-  text-align: center;          /* Center the text */
-  padding: 60px 20px;          /* Add space above and below */
-  border-radius: 0 0 16px 16px; /* Only round bottom corners */
-
-  /* Add a dark overlay for better text readability */
-  /* This uses a simple linear-gradient overlay */
-  background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
-}
-
-/* Make the headline bold and modern */
-.hero h1 {
-  font-size: 2.5em;
-  font-weight: bold;
+/* Brand name uses a serif font */
+.brand-name {
+  font-size: 2em;
+  font-family: 'Proxima Nova', 'Avenir', serif;
+  color: #1a1a1a;
+  font-weight: 400;
   letter-spacing: 1px;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
+  margin-right: auto;
+  margin-left: 8px;
+  margin-top: 8px;
 }
 
-/* Style the subheadline */
-.hero p {
-  font-size: 1.2em;
-  margin-top: 0;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+/* Use Proxima Nova for headlines, subheads, and body copy */
+body {
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+  /* ...existing code... */
 }
 
-/* Story Section Styles */
-.story {
-  background-color: #8BD1CB; /* Secondary Light Blue */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
+/* Headline styles */
+.hero h1 {
+  color: #fff7e1;
+  font-size: 3em; /* Larger font size for headline */
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+  font-weight: 400;
+  margin-left: auto;       /* Remove left margin for centering */
+  margin-right: auto;      /* Center horizontally */
+  margin-top: 8px;      /* Move headline up */
+  margin-bottom: 6px;   /* Reduce space below headline */
+  max-width: 700px;
+  line-height: 1.05; /* Tighter line spacing */
+  text-align: center;      /* Center the headline */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
-/* Add accent color to section headings */
-h2 {
-  color: #2E9DF7; /* Primary blue */
-  margin-top: 0;
-  font-weight: bold;
+/* Subheadline styles as h2, now below h1 */
+.hero h2.hero-subheadline {
+  color: #fff7e1;
+  font-size: 1.3em;
+  font-weight: 400;
+  margin-left: auto;       /* Remove left margin for centering */
+  margin-right: auto;      /* Center horizontally */
+  margin-top: 4px;      /* Move subheadline up */
+  margin-bottom: 0;
+  font-family: 'Proxima Nova', 'Avenir', sans-serif;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  text-align: center;      /* Center the subheadline */
 }
 
-/* Call-to-Action Section Styles */
-.call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
+/* Navigation styles */
+.main-nav {
+  display: flex;
+  gap: 18px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-/* Style the impact story image */
-.impact-image {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
-}
-
-/* Donate Button Styles */
-.donate-button {
-  display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #fff;
-  padding: 14px 32px;
+.nav-link {
+  color: #1a1a1a;
   text-decoration: none;
+  font-size: 1.1em;
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+  font-weight: 400;
+  padding: 4px 0;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Sign In link at far right */
+.sign-in {
+  font-size: 1.3em;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+  font-weight: 400;
+  position: absolute;
+  right: 64px; /* Leave space for hamburger button */
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 0; /* Remove left padding */
+}
+
+/* Add hover effect for Sign In link */
+.sign-in:hover {
+  color: #fff7e1;
+}
+
+/* --- Hero Section Styles --- */
+.hero {
+  /* Make hero fill the whole browser window */
+  min-height: 80vh;
+  height: 80vh;
+  width: 100%;
+  /* Use the provided image for the background */
+  background-image: url('img/Ambote-CharityWater-08462.jpg'); /* Replace with your image path */
+  background-size: cover;      /* Cover the whole area */
+  background-position: center top; /* Show the top of the image */
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Start content at the top */
+  padding-top: 60px;           /* Space from the top for header */
+}
+
+/* Center the button in the hero section */
+.give-water-btn {
+  background-color: #ffc907; /* Use brand yellow */
+  color: #1a1a1a;
+  padding: 14px 32px;
   border-radius: 6px;
   font-weight: bold;
   font-size: 1.1em;
-  margin-top: 18px;
-  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
-  transition: background 0.3s, transform 0.2s;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(255, 201, 7, 0.18); /* Use #ffc907 for shadow */
   border: none;
   cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  display: block;
+  margin: 10px auto 0 auto; /* Move button up */
+  text-align: center;
 }
 
-/* Change button color when hovered */
-.donate-button:hover {
-  background-color: #159A48; /* Dark Green */
-  transform: translateY(-2px) scale(1.04); /* Slight lift */
+.give-water-btn:hover {
+  background-color: #ffc907; /* Keep yellow on hover for consistency */
+  transform: translateY(-2px) scale(1.04);
 }
 
-/* Add some spacing between sections */
-section {
-  margin-bottom: 20px;
+/* Hamburger menu styles */
+.hamburger {
+  position: absolute;
+  right: 16px; /* Move to far right edge */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  z-index: 2;
 }
 
-/* 
-  Media Queries for Responsive Design
-  Media queries help make your website look good on different screen sizes,
-  like phones (small screens) and computers (large screens).
-*/
-
-/* This media query applies styles when the screen is 600px wide or less (like on most phones) */
-@media (max-width: 600px) {
-  /* Make hero section padding smaller on small screens */
-  .hero {
-    padding: 32px 8px;
-    font-size: 1em;
-  }
-
-  /* Make headline font size smaller so it fits on small screens */
-  .hero h1 {
-    font-size: 1.4em;
-  }
-
-  /* Make subheadline font size smaller */
-  .hero p {
-    font-size: 1em;
-  }
-
-  /* Make story and call-to-action sections have less padding */
-  .story,
-  .call-to-action,
-  .donation-section {
-    padding: 14px 8px;
-  }
-
-  /* Make impact story image smaller and stack above the text */
-  .impact-content {
-    display: block; /* Stack items vertically */
-    text-align: center;
-  }
-
-  .impact-image {
-    width: 90%;    /* Make image take up most of the width */
-    max-width: 220px;
-  }
+.hamburger .bar {
+  width: 28px;
+  height: 4px;
+  background: #1a1a1a;
+  margin: 3px 0;
+  border-radius: 2px;
+  display: block;
 }
 
-/* This media query applies styles when the screen is wider than 600px (like on tablets and computers) */
+/* Mobile-first: hide nav by default, show when .show is added */
+.main-nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: #77a8bb;
+  padding: 16px 0;
+  z-index: 1;
+  text-align: center;
+}
+
+.main-nav.show {
+  display: flex;
+}
+
+.nav-link {
+  /* ...existing code... */
+  padding: 12px 0;
+  font-size: 1.2em;
+}
+
+/* Hide sign-in on mobile, show below nav when menu is open */
+.sign-in {
+  /* ...existing code... */
+  display: none;
+  position: static;
+  right: auto;
+  top: auto;
+  transform: none;
+  margin: 12px auto 0 auto;
+  text-align: center;
+}
+
 @media (min-width: 601px) {
-  /* Show image and text side by side in the impact story */
-  .impact-content {
-    display: flex;           /* Place items in a row */
-    align-items: center;     /* Vertically center items */
-    justify-content: center; /* Center the whole group */
-    gap: 28px;               /* Space between image and text */
+  /* Desktop styles: show nav, hide hamburger, sign-in at right */
+  .main-nav {
+    display: flex !important;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    background: none;
+    padding: 0;
     text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
   }
+  .hamburger {
+    display: none;
+  }
+  .nav-link {
+    padding: 4px 0;
+    font-size: 1.1em;
+  }
+  .sign-in {
+    display: block;
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    text-align: right;
+  }
+}
 
-  .impact-image {
-    width: 300px;
+/* --- Responsive adjustments for mobile --- */
+@media (max-width: 600px) {
+  .header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding-left: 8px;
+  }
+  .logo {
+    height: 24px;
+    width: 24px;
+  }
+  .brand-name {
+    font-size: 1.2em;
+    margin-top: 4px;
+  }
+  .main-nav {
+    margin-left: 0;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  .sign-in {
+    position: static;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin-top: 6px;
+    margin-left: 0;
+    padding-left: 12px;
+    align-self: flex-end;
+  }
+  .hero {
+    min-height: 70vh;
+    height: 70vh;
+    background-position: center top;
+    padding-top: 30px;
+  }
+  .hero h1 {
+    font-size: 1.5em;
+    margin-left: 12px;
+    margin-top: 10px;
+    max-width: 95vw;
+  }
+  .hero-bottom h2.hero-subheadline {
+    font-size: 1em;
+  }
+  .hero-bottom {
+    right: 12px;
+    bottom: 12px;
+  }
+  .give-water-btn {
+    padding: 10px 18px;
+    font-size: 1em;
   }
 }
